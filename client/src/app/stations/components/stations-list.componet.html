@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Station</th>
+      <th scope="col">No of Free Bikes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let station of stations; let i=index">
+      <th scope="row">{{i}}</th>
+      <td>{{station.name}}</td>
+      <td>{{station.free_bikes}}</td>
+    </tr>
+  </tbody>
+</table>

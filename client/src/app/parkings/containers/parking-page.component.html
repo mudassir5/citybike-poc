@@ -1,0 +1,8 @@
+<div class="container">
+  <h3 style="text-align:center;">Find Parkings</h3>
+  <app-search-box (search)="searchStation($event)"></app-search-box>
+  <h5 *ngIf="city">Parking Results for City:{{city}}</h5>
+  <div *ngIf="loading" style="text-align:center;">Loading.....</div>
+  <div *ngIf="message">{{message}}</div>
+  <app-parking-list *ngIf="parkings.length" [parkings]="parkings"></app-parking-list>
+</div>
